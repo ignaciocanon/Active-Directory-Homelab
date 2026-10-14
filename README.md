@@ -6,12 +6,12 @@ Welcome to my Homelab repository! Below you will find the complete project docum
 
 ---
 
-## 🇺🇸 ENGLISH DOCUMENTATION
+##  ENGLISH DOCUMENTATION
 
-### 📌 Project Overview
+###  Project Overview
 This project involves the design, deployment, and administration of a simulated corporate environment within a local laboratory (Homelab). A Domain Controller was configured using **Windows Server 2019 (AD DS)** hosted on **Oracle VirtualBox**. The core objective was to structure the organization's identity, enforce central security baselines, and implement the **Principle of Least Privilege (PoLP)** through delegated controls and Group Policies (GPOs).
 
-### 🏗️ Environment Architecture
+###  Environment Architecture
 
 #### 1. Infrastructure Components
 * **Hypervisor:** Oracle VirtualBox (Network configured via **Internal Network** `intnet` using Expert Mode).
@@ -20,17 +20,17 @@ This project involves the design, deployment, and administration of a simulated 
 
 #### 2. Organizational Unit (OU) & Departmental Structure
 A hierarchical OU tree was designed inside the root folder **`THM`** to mirror a real-world enterprise infrastructure:
-* 🏢 **adminigna.com**
-  * 📁 **THM** (Root Management OU)
-    * 📁 **IT** (Technical Support, Network Admins, Help Desk) -> *Contains user: Mark*
-    * 📁 **Management** (Executive Board & Management) -> *Contains user: John*
-    * 📁 **Marketing** (Marketing Department) -> *Contains user: Peter*
-    * 📁 **Research and development** (R&D Department) -> *Contains user: Jax*
-    * 📁 **Sales** (Sales Department) -> *Contains user: Bob*
+*  **adminigna.com**
+  *  **THM** (Root Management OU)
+    *  **IT** (Technical Support, Network Admins, Help Desk) -> *Contains user: Mark*
+    *  **Management** (Executive Board & Management) -> *Contains user: John*
+    *  **Marketing** (Marketing Department) -> *Contains user: Peter*
+    *  **Research and development** (R&D Department) -> *Contains user: Jax*
+    *  **Sales** (Sales Department) -> *Contains user: Bob*
 
 ---
 
-### 🛠️ Implemented Configurations & GPOs
+###  Implemented Configurations & GPOs
 
 #### 1. Password Complexity Restrictions (Domain-Wide)
 Configured at the `Default Domain Policy` level to harden the security posture against brute-force attacks:
@@ -44,7 +44,7 @@ Configured at the `Default Domain Policy` level to harden the security posture a
 
 ---
 
-### 📸 Visual Evidence & Architecture Validation
+###  Visual Evidence & Architecture Validation
 
 #### Screenshot 1: Password Policy Enforcement
 Active Directory Domain Services prevents the creation of the user `Mark` because the assigned password does not meet the complexity, history, or minimum length parameters established in the global GPO. This confirms the security policies are active and blocking weak credentials.
@@ -73,12 +73,12 @@ View of the **Active Directory Users and Computers** console. It validates the s
 
 ---
 
-## 🇪🇸 DOCUMENTACIÓN EN ESPAÑOL
+##  DOCUMENTACIÓN EN ESPAÑOL
 
-### 📌 Descripción del Proyecto
+###  Descripción del Proyecto
 Este proyecto consiste en el diseño, despliegue y administración de un entorno empresarial simulado dentro de un laboratorio local (Homelab). Se configuró un controlador de dominio utilizando **Windows Server 2019 (AD DS)** bajo el hipervisor **Oracle VirtualBox**, estructurando la identidad de la organización y aplicando el **Principio de Menor Privilegio (PoLP)** junto con políticas de automatización y seguridad centralizada.
 
-### 🏗️ Arquitectura del Entorno
+###  Arquitectura del Entorno
 
 #### 1. Componentes de Infraestructura
 * **Hipervisor:** Oracle VirtualBox (Red configurada vía **Red Interna** `intnet` desbloqueada mediante el Modo Experto).
@@ -87,17 +87,17 @@ Este proyecto consiste en el diseño, despliegue y administración de un entorno
 
 #### 2. Estructura de Unidades Organizativas (OUs) y Departamentos
 Se diseñó un árbol jerárquico de OUs dentro de la raíz **`THM`** para reflejar la estructura de una corporación real:
-* 🏢 **adminigna.com**
-  * 📁 **THM** (OU Raíz de la Organización)
-    * 📁 **IT** (Soporte Técnico, Administradores) -> *Usuario: Mark*
-    * 📁 **Management** (Gerencia y Dirección) -> *Usuario: John*
-    * 📁 **Marketing** (Departamento de Marketing) -> *Usuario: Peter*
-    * 📁 **Research and development** (Investigación y Desarrollo) -> *Usuario: Jax*
-    * 📁 **Sales** (Departamento de Ventas) -> *Usuario: Bob*
+*  **adminigna.com**
+  *  **THM** (OU Raíz de la Organización)
+    *  **IT** (Soporte Técnico, Administradores) -> *Usuario: Mark*
+    *  **Management** (Gerencia y Dirección) -> *Usuario: John*
+    *  **Marketing** (Departamento de Marketing) -> *Usuario: Peter*
+    *  **Research and development** (Investigación y Desarrollo) -> *Usuario: Jax*
+    *  **Sales** (Departamento de Ventas) -> *Usuario: Bob*
 
 ---
 
-### 🛠️ Configuraciones Implementadas y GPOs
+###  Configuraciones Implementadas y GPOs
 
 #### 1. Restricciones de Complejidad de Contraseñas (Todo el Dominio)
 Configurada a nivel de `Default Domain Policy` para robustecer la postura de seguridad contra ataques de fuerza bruta:
